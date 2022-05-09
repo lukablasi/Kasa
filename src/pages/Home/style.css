@@ -1,0 +1,59 @@
+.heading-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url("background.png");
+    background-position: center;
+    background-size: cover;
+    height: 230px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 5%;
+    border-radius: 25px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+main {
+    background-color:#F7F7F7;
+    margin: 15px 5%;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 1%;
+}
+
+.listed-apartment-container {
+    position: relative;
+}
+
+.listed-apartment-title{
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color: white;
+    max-width: 60%;
+}
+
+.listed-apartment-picture {
+    width: 92%;
+    height: 300px;
+    margin: 30px 4%;
+    object-fit:cover;
+    border-radius: 2%;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .heading-background {
+        height: 150px;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 130%;
+        max-width: 60%;
+        margin-right: 30%;
+    }
+}
