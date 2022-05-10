@@ -1,0 +1,37 @@
+.error-page {
+    font-size: 30px;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.error-number {
+    font-size: 200px;
+}
+
+.back-home {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.back-home-link {
+    color: #FF6060
+}
+
+@media screen and (max-width: 768px) {
+    .error-number {
+        font-size: 100px;
+        margin-bottom: 30px;
+    }
+
+    .error-page {
+        width: 65%;
+        font-size: 15px;
+        padding: 30px;
+    }
+
+    .back-home-link {
+        font-size: 13px;
+    }
+}

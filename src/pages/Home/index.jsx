@@ -5,22 +5,28 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Heading from '../../components/Heading'
 import backgroundImage from './background.png'
+import { Link } from 'react-router-dom'
 
 
 
 function Home() {
 
     const apartments = data.map((apartment) => 
-        <div className='listed-apartment-container' key={apartment.id}>
+        <Link to={`/apartment/${apartment.id}`} className='listed-apartment-container' key={apartment.id}>
+            
             <img className='listed-apartment-picture' src={apartment.cover} />
+            
             <div className='listed-apartment-title'>{apartment.title}</div>
-        </div>
+            
+        </Link>
     )
+
+    const title='Home anywhere and everywhere'
 
     return(
         <div>
             <Header />
-            <Heading background={backgroundImage}/>
+            <Heading title={title} background={backgroundImage}/>
             <main>
                 {apartments}
             </main>

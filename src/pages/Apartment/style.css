@@ -1,0 +1,101 @@
+article {
+    width: 80%;
+    margin: auto;
+}
+
+article img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+section {
+    position: relative;
+}
+
+section h3 {
+    font-size: 30px;
+    max-width: 70%;
+}
+
+section ul {
+    font-size: 13px;
+    width: 50%;
+    justify-content: flex-start;
+    margin: 15px 0;
+    padding: 0;
+}
+
+section ul li {
+    color: white;
+    background-color: #FF6060;
+    margin-right: 10px;
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+.host {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.host-name {
+    margin-right: 10px;
+}
+
+.host-img {
+    width:60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.stars {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.description, .equipment {
+    width: 45%;
+
+}
+
+.description-title, .equipment-title {
+    color: white;
+
+}
+
+.description-body, .equipment-body {
+    padding: 15px;
+    font-size: 13px;
+    background-color: #F7F7F7;
+}
+
+.turn-arrow {
+    transform: rotateZ(180deg);
+}
+
+.equip-list {
+    font-size: 13px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}

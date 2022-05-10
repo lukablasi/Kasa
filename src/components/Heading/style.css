@@ -10,7 +10,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .heading-background {
+    .background-home {
         height: 150px;
+    }
+    .background-about {
+        height: 300px;
     }
 }

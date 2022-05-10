@@ -17,4 +17,15 @@
 
 .unfoldtab-body {
     color: #FF6060;
+    padding: 10px;
+}
+
+.turn-arrow {
+    transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .unfoldtab {
+        width: 100%;
+    }
 }

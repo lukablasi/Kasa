@@ -1,0 +1,152 @@
+import "./style.css";
+import { useParams } from "react-router-dom";
+import data from "../../data.json";
+import Header from "../../components/Header";
+import Footer from '../../components/Footer'
+import { useState } from 'react'
+
+function Apartment() {
+  const { id } = useParams();
+  const apartment = data.find((apartment) => apartment.id == id);
+
+  const tags = apartment.tags.map((tag) => <li key={tag}>{tag}</li>);
+  const equips = apartment.Amenities.map((equip) => <li key={equip}>{equip}</li>)
+
+  const [descOpened, setDescOpened] = useState(true)
+  const [equipOpened, setEquipOpened] = useState(true)
+
+
+  return (
+    <div>
+      <Header />
+      <article>
+        <img src={apartment.cover} />
+        <section>
+          <div>
+            <h3>{apartment.title}</h3>
+            <div>{apartment.location}</div>
+            <ul>{tags}</ul>
+          </div>
+          <div>
+            <div className="host">
+              <div className="host-name">{apartment.host.name}</div>
+              <img className="host-img" src={apartment.host.picture} />
+            </div>
+            <div className="stars">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                  fill="#FF6060"
+                />
+              </svg>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                  fill="#FF6060"
+                />
+              </svg>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                  fill="#FF6060"
+                />
+              </svg>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                  fill="#E3E3E3"
+                />
+              </svg>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                  fill="#E3E3E3"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+        <div className="details">
+          <div className="description">
+            <div className='title-container'>
+                <div className="description-title">Description</div>
+                <div onClick={() => setDescOpened(!descOpened)}>
+              <svg className={descOpened ? 'turn-arrow' : ''}
+                width="20"
+                height="15"
+                viewBox="0 5 25 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  d="M2.66344 0.859489L0.530518 3.00462L12.4604 14.9233L24.3903 2.99257L22.2574 0.859489L12.4604 10.6572L2.66344 0.859489Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            </div>
+            
+            { descOpened && <div className="description-body">{apartment.description}</div> }
+          </div>
+          <div className="equipment">
+            <div className='title-container'>
+                <div className="equipment-title">Equipment</div>
+                <div onClick={() => setEquipOpened(!equipOpened)}>
+              <svg className={equipOpened ? 'turn-arrow' : ''}
+                width="20"
+                height="15"
+                viewBox="0 5 25 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  d="M2.66344 0.859489L0.530518 3.00462L12.4604 14.9233L24.3903 2.99257L22.2574 0.859489L12.4604 10.6572L2.66344 0.859489Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            </div>
+            { equipOpened &&  
+            <div className="equipment-body">
+                <ul className='equip-list'>{equips}</ul>
+            </div>
+}
+          </div>
+        </div>
+      </article>
+      <Footer />
+    </div>
+  );
+}
+
+export default Apartment;

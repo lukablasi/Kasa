@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from 'react'
 
-function UnfoldTab() {
+function UnfoldTab(props) {
     
     const [tab, updateTab] = useState(false);
     
@@ -12,7 +12,7 @@ function UnfoldTab() {
     <div className="unfoldtab">
       <div>
         <div className="unfoldtab-header">
-          <div>Reliablility</div>
+          <div>{props.title}</div>
           <div onClick={()=> updateTab(false)}>
             <svg
               width="20"
@@ -29,22 +29,22 @@ function UnfoldTab() {
           </div>
         </div>
       </div>
-      <p className="unfoldtab-body">teafeagagrgsfgadfadfadfadfadfadfaf</p>
+      <p className="unfoldtab-body">{props.text}</p>
     </div>
       ) : (
         <div className="unfoldtab">
         <div>
           <div className="unfoldtab-header">
-            <div>Reliablility</div>
+            <div>{props.title}</div>
             <div onClick={()=> updateTab(true)}>
-              <svg
+              <svg className='turn-arrow'
                 width="20"
                 height="15"
-                viewBox="0 5 25 15"
+                viewBox="0 5 25 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
+                <path 
                   d="M2.66344 0.859489L0.530518 3.00462L12.4604 14.9233L24.3903 2.99257L22.2574 0.859489L12.4604 10.6572L2.66344 0.859489Z"
                   fill="white"
                 />
