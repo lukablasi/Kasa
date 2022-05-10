@@ -22,11 +22,22 @@ ul {
     justify-content: space-around;
 }
 
+.link {
+    color: #FF6060;
+    text-decoration: none;
+}
+
+.link-active {
+    color: #FF6060;
+
+}
+
 svg {
     margin-bottom: -10px;
     padding: 5px;
 
 }
+
 
 @media screen and (max-width: 768px) {
     nav {

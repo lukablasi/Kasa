@@ -1,0 +1,20 @@
+.unfoldtab {
+    background-color: #F6F6F6;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.unfoldtab-header {
+    background-color: #FF6060;
+    color: white;
+    margin-top: 0;
+    padding: 10px;
+    font-weight: 300;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.unfoldtab-body {
+    color: #FF6060;
+}

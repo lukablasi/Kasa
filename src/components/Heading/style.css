@@ -1,0 +1,16 @@
+.heading-background {
+    background-position: center;
+    background-size: cover;
+    height: 230px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 5%;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .heading-background {
+        height: 150px;
+    }
+}

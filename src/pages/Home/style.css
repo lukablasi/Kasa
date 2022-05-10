@@ -1,13 +1,5 @@
 .heading-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url("background.png");
-    background-position: center;
-    background-size: cover;
-    height: 230px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 5%;
-    border-radius: 25px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url("background.png"); */
 }
 
 h1 {
@@ -46,9 +38,6 @@ main {
 @media screen and (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
-    }
-    .heading-background {
-        height: 150px;
     }
     h1 {
         font-weight: 400;

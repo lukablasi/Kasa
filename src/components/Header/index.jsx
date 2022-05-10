@@ -1,4 +1,5 @@
 import './style.css'
+import {NavLink} from 'react-router-dom'
 
 function Header() {
     return(
@@ -10,8 +11,14 @@ function Header() {
 sa</div>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li><NavLink 
+                    to='/' 
+                    className={({isActive}) => isActive ? 'link-active' : 'link'}
+                    >Home</NavLink></li>
+                    <li><NavLink 
+                    to='/about'
+                    className={({isActive}) => isActive ? 'link-active' : 'link'}
+                    >About</NavLink></li>
                 </ul>
             </nav>
         </header>

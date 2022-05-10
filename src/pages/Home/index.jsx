@@ -3,6 +3,9 @@ import './style.css'
 import data from '../../data.json'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import Heading from '../../components/Heading'
+import backgroundImage from './background.png'
+
 
 
 function Home() {
@@ -17,9 +20,7 @@ function Home() {
     return(
         <div>
             <Header />
-            <div className='heading-background'>
-                <h1>Home anywhere and everywhere</h1>
-            </div>
+            <Heading background={backgroundImage}/>
             <main>
                 {apartments}
             </main>
