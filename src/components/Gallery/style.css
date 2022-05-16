@@ -1,0 +1,27 @@
+.gallery {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.gallery-container {
+    position: relative;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 160px;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.no-display {
+    display: none;
+}

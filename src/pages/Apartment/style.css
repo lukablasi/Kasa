@@ -3,12 +3,6 @@ article {
     margin: auto;
 }
 
-article img {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
 
 section {
     position: relative;
@@ -98,4 +92,33 @@ section ul li {
     display: block;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .host {
+        position: static;
+    }
+
+    
+
+    section h3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        max-width: 90%;
+    }
+    section ul {
+        font-size: 13px;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 15px 0;
+        padding: 0;
+    }
+    section ul li {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 5px;
+        padding: 5px 5px;
+        border-radius: 10px;
+    }
 }
