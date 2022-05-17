@@ -19,12 +19,13 @@ function Apartment() {
   ));
   
 
-  const [descOpened, setDescOpened] = useState(true);
-  const [equipOpened, setEquipOpened] = useState(true);
+  const [descOpened, setDescOpened] = useState(false);
+  const [equipOpened, setEquipOpened] = useState(false);
 
   function FullStar()  {
     return (
     <svg
+    className='star'
       width="30"
       height="30"
       viewBox="0 0 30 30"
@@ -41,6 +42,7 @@ function Apartment() {
   function EmptyStar() {
     return (
     <svg
+    className='star'
       width="30"
       height="30"
       viewBox="0 0 30 30"
@@ -78,7 +80,7 @@ function Apartment() {
             <div>{apartment.location}</div>
             <ul>{tags}</ul>
           </div>
-          <div>
+          <div className='host-container'>
             <div className="host">
               <div className="host-name">{apartment.host.name}</div>
               <img className="host-img" src={apartment.host.picture} />

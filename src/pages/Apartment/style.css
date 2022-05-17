@@ -99,7 +99,31 @@ section ul li {
         position: static;
     }
 
-    
+    .stars {
+        position: static;
+        display: flex;
+        align-items: center;
+    }
+
+    .host-name {
+        font-size: 14px;
+    }
+
+    .host-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .star {
+        height: 18px;
+        width: 18px;
+    }
+
+    .host-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 
     section h3 {
         font-size: 18px;
@@ -120,5 +144,13 @@ section ul li {
         margin-right: 5px;
         padding: 5px 5px;
         border-radius: 10px;
+    }
+    .details {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .description, .equipment {
+        width: 100%;
+        margin-top: 15px;
     }
 }
