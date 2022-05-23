@@ -3,7 +3,7 @@ import './style.css'
 function Heading(props) {
 
     const url = window.location.pathname
-    const isAbout = url == '/about' ? true : false
+    const isAbout = url === '/about' ? true : false
 
     return(
             <div className={`heading-background ${isAbout ? 'background-about' : 'background-home'}`} style={{

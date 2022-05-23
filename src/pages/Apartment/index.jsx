@@ -1,5 +1,5 @@
 import "./style.css";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../data.json";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -7,20 +7,31 @@ import Gallery from "../../components/Gallery";
 import { useState } from "react";
 
 
+
 function Apartment() {
   const { id } = useParams();
-  const apartment = data.find((apartment) => apartment.id == id);
 
+  const apartment = data.find((apartment) => apartment.id === id);
+
+  const [descOpened, setDescOpened] = useState(false);
+  const [equipOpened, setEquipOpened] = useState(false);
+
+  if (apartment === undefined) {
+    return <Navigate to='/error' />
+  }
+  
   const tags = apartment.tags.map((tag) => <li key={tag}>{tag}</li>);
 
-  const areEquips = apartment.Amenities != undefined ? apartment.Amenities : ['none']
+  const areEquips = apartment.Amenities !== undefined ? apartment.Amenities : ['none']
    const equips = areEquips.map((equip) => (
     <li key={equip}>{equip}</li>
   ));
   
 
-  const [descOpened, setDescOpened] = useState(false);
-  const [equipOpened, setEquipOpened] = useState(false);
+
+  
+
+  
 
   function FullStar()  {
     return (
@@ -83,7 +94,7 @@ function Apartment() {
           <div className='host-container'>
             <div className="host">
               <div className="host-name">{apartment.host.name}</div>
-              <img className="host-img" src={apartment.host.picture} />
+              <img alt='host' className="host-img" src={apartment.host.picture} />
             </div>
             <div className="stars">
               {ratingStars}

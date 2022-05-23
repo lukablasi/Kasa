@@ -9,7 +9,7 @@ function Gallery(props) {
 
     return(
         <div className='gallery-container'>
-            <img className='gallery' src={pic} />
+            <img alt='apartment view' className='gallery' src={pic} />
             
             
             <svg onClick={()=> {
@@ -20,7 +20,7 @@ function Gallery(props) {
                 } else {
                     updatePic(props.photos[props.photos.length - 1])
                 }
-            }} className={`left-arrow ${(props.photos.length == 1) ? 'no-display' : ''}`} width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            }} className={`left-arrow ${(props.photos.length === 1) ? 'no-display' : ''}`} width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z" fill="white"/>
 </svg>
 
@@ -33,7 +33,7 @@ function Gallery(props) {
     }
     
     
-}} className={`right-arrow ${(props.photos.length == 1) ? 'no-display' : ''}`} width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+}} className={`right-arrow ${(props.photos.length === 1) ? 'no-display' : ''}`} width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.959961 72.3458L8.03996 79.4258L47.64 39.8258L8.03996 0.22583L0.959961 7.30583L33.48 39.8258L0.959961 72.3458Z" fill="white"/>
 </svg>
 
