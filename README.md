@@ -4,3 +4,7 @@ A web app for apartment rental.
 Main Page
 
 ![](https://github.com/lukablasi/Web-App-For-Apartment-Rental---React/blob/master/screenshots/mainpage.PNG)
+
+Main Page Scrolled Down
+
+![](https://github.com/lukablasi/Web-App-For-Apartment-Rental---React/blob/master/screenshots/mainpage2.PNG)
