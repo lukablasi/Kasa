@@ -7,7 +7,7 @@ Main Page
 
 Main Page Scrolled Down
 
-![](https://github.com/lukablasi/Kasa/blob/master/screenshots/mainpage.PNG2)
+![](https://github.com/lukablasi/Kasa/blob/master/screenshots/mainpage2.PNG)
 
 Single Appartment Page
 
